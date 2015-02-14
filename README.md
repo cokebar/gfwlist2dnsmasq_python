@@ -11,7 +11,8 @@ First git clone
 ```bash
 git clone https://github.com/cokebar/gfwlist2dnsmasq.git
 ```
-Modify gfwlist2dnsmasq.sh:
+Then Modify gfwlist2dnsmasq.sh:
+
 Change this to your DNS server:
 ```bash
 DNS='127.0.0.1#5353'
