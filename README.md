@@ -6,21 +6,27 @@ Just another script to auto-generate dnsmasq ipset rules using gfwlist
 
 Using:
 -----
-### First git clone
+#### First git clone
 ```bash
 git clone https://github.com/cokebar/gfwlist2dnsmasq.git
 ```
-### Modify gfwlist2dnsmasq.sh:
-#### Change this to your DNS server:
+#### Modify gfwlist2dnsmasq.sh:
+Change this to your DNS server:
+```bash
 DNS='127.0.0.1#5353'
+```
 
-#### Change this to your ipset name:
+Change this to your ipset name:
+```bash
 IPSET=gfwlist
+```
 
-#### Path to save you rule file:
+Path to save you rule file:
+```bash
 RULE_FILE=./dnsmasq_list.conf
+```
 
-#### Add your own extra domain here. One domain in a line. eg:
+Add your own extra domain here. One domain in a line. eg:
 ```bash
 EX_DOMAIN='.google.com
 .google.com.hk
