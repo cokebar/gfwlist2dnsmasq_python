@@ -3,6 +3,7 @@ gfwlist2dnsmasq
 Intro
 -----
 Just another script to auto-generate dnsmasq ipset rules using gfwlist
+
 __Notification: Need python2, do not use python3__
 
 Using:
