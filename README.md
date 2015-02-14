@@ -7,11 +7,11 @@ Just another script to auto-generate dnsmasq ipset rules using gfwlist
 
 Using:
 -----
-#### First git clone
+1. First git clone
 ```bash
 git clone https://github.com/cokebar/gfwlist2dnsmasq.git
 ```
-#### Modify gfwlist2dnsmasq.sh:
+2. Modify gfwlist2dnsmasq.sh:
 Change this to your DNS server:
 ```bash
 DNS='127.0.0.1#5353'
@@ -44,7 +44,7 @@ EX_DOMAIN='.google.com
 .1e100.net
 .blogspot.tw'
 ```
-### And then just cd to the directory and run gfwlist2dnsmasq.sh:
+3. And then just cd to the directory and run gfwlist2dnsmasq.sh:
 ```bash
 cd gfwlist2dnsmasq
 ./gfwlist2dnsmasq.sh
