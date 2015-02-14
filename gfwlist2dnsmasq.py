@@ -1,9 +1,6 @@
 #!/usr/bin/env python  
-#coding=utf-8
-#  
+# coding=utf-8
 # Generate a list of dnsmasq rules with ipset for gfwlist
-#  
-# Copyright (C) 2014 http://www.shuyz.com   
 # Ref https://code.google.com/p/autoproxy-gfwlist/wiki/Rules    
  
 import urllib2 
