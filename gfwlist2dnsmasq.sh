@@ -25,7 +25,6 @@ EX_DOMAIN='.google.com
 .1e100.net
 .blogspot.tw'
 
-
 python ./gfwlist2dnsmasq.py
 
 echo '#extra domains' >> $RULE_FILE
@@ -35,6 +34,3 @@ do
 	echo 'server=/'$each_line'/'$DNS >> $RULE_FILE
 	echo 'ipset=/'$each_line'/'$IPSET >> $RULE_FILE
 done
-
-chown www-data:www-data $RULE_FILE
-
