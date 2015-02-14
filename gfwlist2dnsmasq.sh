@@ -1,9 +1,4 @@
-# gfwlist2dnsmasq
-Just another script to auto-generate dnsmasq ipset rules using gfwlist
-
-Using:
-
-git clone & modify gfwlist2dnsmasq.sh:
+#!/bin/bash
 
 # Change this to your DNS server
 DNS='127.0.0.1#5353'
@@ -14,7 +9,7 @@ IPSET=gfwlist
 # Path to save you rule file
 RULE_FILE=./dnsmasq_list.conf
 
-# Add your own extra domain here. One domain in a line. eg:
+# Add your own extra domain here. One domain in a line.
 EX_DOMAIN='.google.com
 .google.com.hk
 .google.com.tw
@@ -30,4 +25,16 @@ EX_DOMAIN='.google.com
 .1e100.net
 .blogspot.tw'
 
-And then just cd to the directory and run gfwlist2dnsmasq.sh
+
+python ./gfwlist2dnsmasq.py
+
+echo '#extra domains' >> $RULE_FILE
+
+for each_line in $EX_DOMAIN
+do
+	echo 'server=/'$each_line'/'$DNS >> $RULE_FILE
+	echo 'ipset=/'$each_line'/'$IPSET >> $RULE_FILE
+done
+
+chown www-data:www-data $RULE_FILE
+
