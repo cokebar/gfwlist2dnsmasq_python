@@ -51,3 +51,6 @@ And then just cd to the directory and run gfwlist2dnsmasq.sh:
 cd gfwlist2dnsmasq
 ./gfwlist2dnsmasq.sh
 ```
+If you don't want to generate the rules by yourself, you can download the rule file from:
+
+https://github.com/cokebar/gfwlist2dnsmasq/releases
