@@ -25,7 +25,7 @@ EX_DOMAIN='.google.com
 .1e100.net
 .blogspot.tw'
 
-python ./gfwlist2dnsmasq.py
+python ./gfwlist2dnsmasq.py > /dev/null
 
 echo '#extra domains' >> $RULE_FILE
 
