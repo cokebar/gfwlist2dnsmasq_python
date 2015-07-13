@@ -15,6 +15,7 @@ import shutil
  
 mydnsip = '127.0.0.1'
 mydnsport = '5353'
+ipsetname = 'gfwlist'
 # Extra Domain;
 EX_DOMAIN=[ \
 '.google.com', \
@@ -85,7 +86,7 @@ tfs.close()
 
 for each in EX_DOMAIN:
 	fs.write('server=/%s/%s#%s\n'%(each,mydnsip,mydnsport))
-	fs.write('ipset=/%s/gfwlist\n'%each)
+	fs.write('ipset=/%s/%s\n'%(each,ipsetname))
 
 print 'write extra domain done'
 
