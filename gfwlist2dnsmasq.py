@@ -41,7 +41,7 @@ comment_pattern = '^\!|\[|^@@|^\d+\.\d+\.\d+\.\d+'
 domain_pattern = '([\w\-\_]+\.[\w\.\-\_]+)[\/\*]*' 
 tmpfile = '/tmp/gfwlisttmp'
 # do not write to router internal flash directly
-outfile = '/var/www/wordpress/wp-content/uploads/secured_files/dnsmasq_list.conf'
+outfile = './dnsmasq_list.conf'
 #outfile = './dnsmasq_list.conf'
  
 fs =  file(outfile, 'w')
