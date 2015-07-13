@@ -78,7 +78,7 @@ for line in tfs.readlines():
 				print 'saving ' + domain[0]
 				domainlist.append(domain[0])
 				fs.write('server=/.%s/%s#%s\n'%(domain[0],mydnsip,mydnsport))
-				fs.write('ipset=/.%s/gfwlist\n'%domain[0])
+				fs.write('ipset=/.%s/%s\n'%(domain[0],ipsetname))
 		else:
 			print 'no valid domain in this line: ' + line
 					
