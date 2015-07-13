@@ -1,7 +1,10 @@
 #!/usr/bin/env python  
-# coding=utf-8
+#coding=utf-8
+#  
 # Generate a list of dnsmasq rules with ipset for gfwlist
-# Ref https://code.google.com/p/autoproxy-gfwlist/wiki/Rules
+#  
+# Copyright (C) 2014 http://www.shuyz.com   
+# Ref https://code.google.com/p/autoproxy-gfwlist/wiki/Rules    
  
 import urllib2 
 import re
@@ -12,6 +15,23 @@ import shutil
  
 mydnsip = '127.0.0.1'
 mydnsport = '5353'
+# Extra Domain;
+EX_DOMAIN=[ \
+'.google.com', \
+'.google.com.hk', \
+'.google.com.tw', \
+'.google.com.sg', \
+'.google.co.jp', \
+'.blogspot.com', \
+'.blogspot.sg', \
+'.blogspot.hk', \
+'.blogspot.jp', \
+'.gvt1.com', \
+'.gvt2.com', \
+'.gvt3.com', \
+'.1e100.net', \
+'.blogspot.tw' \
+]
  
 # the url of gfwlist
 baseurl = 'https://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt'
@@ -20,7 +40,8 @@ comment_pattern = '^\!|\[|^@@|^\d+\.\d+\.\d+\.\d+'
 domain_pattern = '([\w\-\_]+\.[\w\.\-\_]+)[\/\*]*' 
 tmpfile = '/tmp/gfwlisttmp'
 # do not write to router internal flash directly
-outfile = './dnsmasq_list.conf'
+outfile = '/var/www/wordpress/wp-content/uploads/secured_files/dnsmasq_list.conf'
+#outfile = './dnsmasq_list.conf'
  
 fs =  file(outfile, 'w')
 fs.write('# gfw list ipset rules for dnsmasq\n')
@@ -40,6 +61,7 @@ print 'page content fetched, analysis...'
  
 # remember all blocked domains, in case of duplicate records
 domainlist = []
+
  
 for line in tfs.readlines():	
 	if re.findall(comment_pattern, line):
@@ -60,6 +82,13 @@ for line in tfs.readlines():
 			print 'no valid domain in this line: ' + line
 					
 tfs.close()	
+
+for each in EX_DOMAIN:
+	fs.write('server=/%s/%s#%s\n'%(each,mydnsip,mydnsport))
+	fs.write('ipset=/%s/gfwlist\n'%each)
+
+print 'write extra domain done'
+
 fs.close();
  
 print 'done!'
