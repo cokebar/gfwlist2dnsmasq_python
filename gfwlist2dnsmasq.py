@@ -4,7 +4,7 @@
 # Generate a list of dnsmasq rules with ipset for gfwlist
 #  
 # Copyright (C) 2014 http://www.shuyz.com   
-# Ref https://code.google.com/p/autoproxy-gfwlist/wiki/Rules    
+# Ref https://github.com/gfwlist/gfwlist   
  
 import urllib2 
 import re
@@ -35,7 +35,7 @@ EX_DOMAIN=[ \
 ]
  
 # the url of gfwlist
-baseurl = 'https://autoproxy-gfwlist.googlecode.com/svn/trunk/gfwlist.txt'
+baseurl = 'https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt'
 # match comments/title/whitelist/ip address
 comment_pattern = '^\!|\[|^@@|^\d+\.\d+\.\d+\.\d+'
 domain_pattern = '([\w\-\_]+\.[\w\.\-\_]+)[\/\*]*' 
