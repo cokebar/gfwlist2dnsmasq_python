@@ -42,7 +42,7 @@ domain_pattern = '([\w\-\_]+\.[\w\.\-\_]+)[\/\*]*'
 tmpfile = '/tmp/gfwlisttmp'
 # do not write to router internal flash directly
 #outfile = '/var/www/wordpress/wp-content/uploads/secured_files/foreign_list.conf'
-outfile = './foreign_list.conf'
+outfile = './dnsmasq_noipset_list.conf'
  
 fs =  file(outfile, 'w')
 fs.write('# gfw list ipset rules for dnsmasq\n')
