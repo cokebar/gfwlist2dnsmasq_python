@@ -6,6 +6,8 @@ Just another script to auto-generate dnsmasq ipset rules using gfwlist
 
 __Notification: Need python2, do not use python3__
 
+GFWList is composed by regular expressions, but dnsmasq rules is formed by domain names. So the conversion from GFWList to dnsmasq rule list is not a equivalent conversion. You might need to add extra rules or modify some converted rules.
+
 Using:
 -----
 
