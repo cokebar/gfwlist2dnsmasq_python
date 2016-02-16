@@ -2,8 +2,6 @@
 #coding=utf-8
 #  
 # Generate a list of dnsmasq rules with ipset for gfwlist
-#  
-# Copyright (C) 2014 http://www.shuyz.com   
 # Ref https://github.com/gfwlist/gfwlist   
  
 import urllib2 
