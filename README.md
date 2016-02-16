@@ -56,9 +56,10 @@ If you don't want to generate the rules by yourself, you can download the rule f
 
 https://github.com/cokebar/gfwlist2dnsmasq/releases
 
-If you're facing a "CERTIFICATE_VERIFY_FAILED" problem (This ERROR appears when your system do not have trusted root CA files), try below:
+If you're facing a "CERTIFICATE_VERIFY_FAILED" problem, try below:
 
-add the following line below the line "import ssl"
+add the following lines at the beginning
 ```python
+import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
 ```
