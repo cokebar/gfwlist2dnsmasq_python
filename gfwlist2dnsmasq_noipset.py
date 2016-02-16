@@ -12,6 +12,7 @@ import os
 import datetime
 import base64
 import shutil
+import ssl
  
 mydnsip = '127.0.0.1'
 mydnsport = '5300'
@@ -50,6 +51,7 @@ fs.write('# updated on ' + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 fs.write('#\n')
  
 print 'fetching list...'
+ssl._create_default_https_context = ssl._create_unverified_context
 content = urllib2.urlopen(baseurl, timeout=15).read().decode('base64')
  
 # write the decoded content to file then read line by line
