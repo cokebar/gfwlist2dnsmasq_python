@@ -55,11 +55,3 @@ python gfwlist2dnsmasq.py
 If you don't want to generate the rules by yourself, you can download the rule file from:
 
 https://github.com/cokebar/gfwlist2dnsmasq/releases
-
-If you're facing a "CERTIFICATE_VERIFY_FAILED" problem, try below:
-
-add the following lines at the beginning
-```python
-import ssl
-ssl._create_default_https_context = ssl._create_unverified_context
-```
