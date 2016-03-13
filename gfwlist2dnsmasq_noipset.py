@@ -16,7 +16,6 @@ import ssl
  
 mydnsip = '127.0.0.1'
 mydnsport = '5300'
-ipsetname = 'gfwlist'
 # Extra Domain;
 EX_DOMAIN=[ \
 '.google.com', \
