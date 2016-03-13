@@ -40,7 +40,8 @@ comment_pattern = '^\!|\[|^@@|^\d+\.\d+\.\d+\.\d+'
 domain_pattern = '([\w\-\_]+\.[\w\.\-\_]+)[\/\*]*' 
 tmpfile = '/tmp/gfwlisttmp'
 # do not write to router internal flash directly
-outfile = './dnsmasq_list.conf'
+outfile = '/tmp/dnsmasq_list.conf'
+rulesfile = './dnsmasq_list.conf'
  
 fs =  file(outfile, 'w')
 fs.write('# gfw list ipset rules for dnsmasq\n')
@@ -48,7 +49,8 @@ fs.write('# updated on ' + datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 fs.write('#\n')
  
 print 'fetching list...'
-ssl._create_default_https_context = ssl._create_unverified_context
+if hasattr(ssl, '_create_unverified_context'):
+	ssl._create_default_https_context = ssl._create_unverified_context
 content = urllib2.urlopen(baseurl, timeout=15).read().decode('base64')
  
 # write the decoded content to file then read line by line
@@ -90,5 +92,7 @@ for each in EX_DOMAIN:
 print 'write extra domain done'
 
 fs.close();
+print 'moving generated file to dnsmasg directory'
+shutil.move(outfile, rulesfile)
  
 print 'done!'
