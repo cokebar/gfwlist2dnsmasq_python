@@ -41,7 +41,6 @@ domain_pattern = '([\w\-\_]+\.[\w\.\-\_]+)[\/\*]*'
 tmpfile = '/tmp/gfwlisttmp'
 # do not write to router internal flash directly
 outfile = './dnsmasq_list.conf'
-#outfile = './dnsmasq_list.conf'
  
 fs =  file(outfile, 'w')
 fs.write('# gfw list ipset rules for dnsmasq\n')
