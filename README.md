@@ -26,7 +26,7 @@ ipsetname = 'gfwlist'
 
 Path to save you rule file:
 ```python
-outfile = './dnsmasq_list.conf'
+rulefile = './dnsmasq_list.conf'
 ```
 
 Add your own extra domain here. One domain in a line. eg:
