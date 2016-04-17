@@ -22,10 +22,12 @@ EX_DOMAIN=[ \
 '.google.com.tw', \
 '.google.com.sg', \
 '.google.co.jp', \
+'.google.co.kr', \
 '.blogspot.com', \
 '.blogspot.sg', \
 '.blogspot.hk', \
 '.blogspot.jp', \
+'.blogspot.kr', \
 '.gvt1.com', \
 '.gvt2.com', \
 '.gvt3.com', \
