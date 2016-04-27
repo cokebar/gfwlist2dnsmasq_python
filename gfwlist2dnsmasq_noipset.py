@@ -28,6 +28,7 @@ EX_DOMAIN=[ \
 '.blogspot.sg', \
 '.blogspot.hk', \
 '.blogspot.jp', \
+'.blogspot.kr', \
 '.gvt1.com', \
 '.gvt2.com', \
 '.gvt3.com', \
