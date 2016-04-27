@@ -65,4 +65,4 @@ Known bugs:
 server=/.85.17.73.31/127.0.0.1#5353
 ipset=/.85.17.73.31/gfwlist
 ```
-How to fix: just delete these line.
+How to fix: just delete these lines.
