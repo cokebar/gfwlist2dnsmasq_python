@@ -23,6 +23,7 @@ EX_DOMAIN=[ \
 '.google.com.tw', \
 '.google.com.sg', \
 '.google.co.jp', \
+'.google.co.kr', \
 '.blogspot.com', \
 '.blogspot.sg', \
 '.blogspot.hk', \
