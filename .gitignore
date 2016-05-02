@@ -1,4 +1,4 @@
-dnsmasq_list.conf
+*.conf
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
