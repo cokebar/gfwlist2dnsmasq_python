@@ -41,6 +41,7 @@ baseurl = 'https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt'
 # match comments/title/whitelist/ip address
 comment_pattern = '^\!|\[|^@@|^\d+\.\d+\.\d+\.\d+'
 domain_pattern = '([\w\-\_]+\.[\w\.\-\_]+)[\/\*]*' 
+ip_pattern = re.compile(r'\b\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}\b')
 tmpfile = '/tmp/gfwlisttmp'
 # do not write to router internal flash directly
 outfile = '/tmp/dnsmasq_list.conf'
@@ -79,6 +80,9 @@ for line in tfs.readlines():
 				found = domainlist.index(domain[0])
 				print domain[0] + ' exists.'
 			except ValueError:
+				if ip_pattern.match(domain[0]):
+					print 'skipping ip: ' + domain[0]
+					continue
 				print 'saving ' + domain[0]
 				domainlist.append(domain[0])
 				fs.write('server=/.%s/%s#%s\n'%(domain[0],mydnsip,mydnsport))
