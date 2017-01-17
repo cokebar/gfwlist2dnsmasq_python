@@ -3,6 +3,7 @@ gfwlist2dnsmasq
 Intro
 -----
 Just another script to auto-generate dnsmasq ipset rules using gfwlist
+NOTIFICATION: This repo will not be maintained anymore. You can fork this repo and modify it by yourself.
 
 __Notification: Need python2, do not use python3__
 
@@ -57,12 +58,3 @@ python gfwlist2dnsmasq.py
 If you don't want to generate the rules by yourself, you can download the rule file from:
 
 https://github.com/cokebar/gfwlist2dnsmasq/releases
-
-Known bugs:
------
-1. Invalid lines at the beginning of the list (This script only do with domain address, but gfwlist contains IP addresses):
-```
-server=/.85.17.73.31/127.0.0.1#5353
-ipset=/.85.17.73.31/gfwlist
-```
-How to fix: just delete these lines.
