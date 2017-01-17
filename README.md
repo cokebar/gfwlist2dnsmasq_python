@@ -3,7 +3,8 @@ gfwlist2dnsmasq
 Intro
 -----
 Just another script to auto-generate dnsmasq ipset rules using gfwlist
-NOTIFICATION: This repo will not be maintained anymore. You can fork this repo and modify it by yourself.
+
+__Notification: This repo will not be maintained anymore. You can fork this repo and modify it by yourself__
 
 __Notification: Need python2, do not use python3__
 
