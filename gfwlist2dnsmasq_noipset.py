@@ -18,22 +18,22 @@ mydnsip = '127.0.0.1'
 mydnsport = '5300'
 # Extra Domain;
 EX_DOMAIN=[ \
-'.google.com', \
-'.google.com.hk', \
-'.google.com.tw', \
-'.google.com.sg', \
-'.google.co.jp', \
-'.google.co.kr', \
-'.blogspot.com', \
-'.blogspot.sg', \
-'.blogspot.hk', \
-'.blogspot.jp', \
-'.blogspot.kr', \
-'.gvt1.com', \
-'.gvt2.com', \
-'.gvt3.com', \
-'.1e100.net', \
-'.blogspot.tw' \
+'google.com', \
+'google.com.hk', \
+'google.com.tw', \
+'google.com.sg', \
+'google.co.jp', \
+'google.co.kr', \
+'blogspot.com', \
+'blogspot.sg', \
+'blogspot.hk', \
+'blogspot.jp', \
+'blogspot.kr', \
+'gvt1.com', \
+'gvt2.com', \
+'gvt3.com', \
+'1e100.net', \
+'blogspot.tw' \
 ]
  
 # the url of gfwlist
@@ -85,7 +85,7 @@ for line in tfs.readlines():
 					continue
 				print 'saving ' + domain[0]
 				domainlist.append(domain[0])
-				fs.write('server=/.%s/%s#%s\n'%(domain[0],mydnsip,mydnsport))
+				fs.write('server=/%s/%s#%s\n'%(domain[0],mydnsip,mydnsport))
 		else:
 			print 'no valid domain in this line: ' + line
 					
