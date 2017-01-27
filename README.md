@@ -4,7 +4,7 @@ Intro
 -----
 Just another script to auto-generate dnsmasq ipset rules using gfwlist
 
-__Notification: This repo will not be maintained anymore. You can fork this repo and modify it by yourself__
+__Notification: Because python is not applicable for most routers, so this repo will not be maintained anymore unless critical bug is found. You can fork this repo and modify it by yourself. I'm planning write a shell script version instead__
 
 __Notification: Need python2, do not use python3__
 
@@ -34,22 +34,22 @@ rulefile = './dnsmasq_list.conf'
 Add your own extra domain here. One domain in a line. eg:
 ```python
 EX_DOMAIN=[ \
-'.google.com', \
-'.google.com.hk', \
-'.google.com.tw', \
-'.google.com.sg', \
-'.google.co.jp', \
-'.google.co.kr', \
-'.blogspot.com', \
-'.blogspot.sg', \
-'.blogspot.hk', \
-'.blogspot.jp', \
-'.blogspot.kr', \
-'.gvt1.com', \
-'.gvt2.com', \
-'.gvt3.com', \
-'.1e100.net', \
-'.blogspot.tw' \
+'google.com', \
+'google.com.hk', \
+'google.com.tw', \
+'google.com.sg', \
+'google.co.jp', \
+'google.co.kr', \
+'blogspot.com', \
+'blogspot.sg', \
+'blogspot.hk', \
+'blogspot.jp', \
+'blogspot.kr', \
+'gvt1.com', \
+'gvt2.com', \
+'gvt3.com', \
+'1e100.net', \
+'blogspot.tw' \
 ]
 ```
 Then run gfwlist2dnsmasq.py:
