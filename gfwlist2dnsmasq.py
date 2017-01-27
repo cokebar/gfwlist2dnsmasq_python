@@ -17,22 +17,22 @@ mydnsport = '5353'
 ipsetname = 'gfwlist'
 # Extra Domain;
 EX_DOMAIN=[ \
-'.google.com', \
-'.google.com.hk', \
-'.google.com.tw', \
-'.google.com.sg', \
-'.google.co.jp', \
-'.google.co.kr', \
-'.blogspot.com', \
-'.blogspot.sg', \
-'.blogspot.hk', \
-'.blogspot.jp', \
-'.blogspot.kr', \
-'.gvt1.com', \
-'.gvt2.com', \
-'.gvt3.com', \
-'.1e100.net', \
-'.blogspot.tw' \
+'google.com', \
+'google.com.hk', \
+'google.com.tw', \
+'google.com.sg', \
+'google.co.jp', \
+'google.co.kr', \
+'blogspot.com', \
+'blogspot.sg', \
+'blogspot.hk', \
+'blogspot.jp', \
+'blogspot.kr', \
+'gvt1.com', \
+'gvt2.com', \
+'gvt3.com', \
+'1e100.net', \
+'blogspot.tw' \
 ]
  
 # the url of gfwlist
@@ -80,8 +80,8 @@ for line in tfs.readlines():
 			except ValueError:
 				print 'saving ' + domain[0]
 				domainlist.append(domain[0])
-				fs.write('server=/.%s/%s#%s\n'%(domain[0],mydnsip,mydnsport))
-				fs.write('ipset=/.%s/%s\n'%(domain[0],ipsetname))
+				fs.write('server=/%s/%s#%s\n'%(domain[0],mydnsip,mydnsport))
+				fs.write('ipset=/%s/%s\n'%(domain[0],ipsetname))
 		else:
 			print 'no valid domain in this line: ' + line
 					
