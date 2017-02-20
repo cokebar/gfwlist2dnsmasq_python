@@ -97,7 +97,7 @@ for each in EX_DOMAIN:
 print 'write extra domain done'
 
 fs.close();
-print 'moving generated file to dnsmasg directory'
+print 'moving generated file to dnsmasq directory'
 shutil.move(outfile, rulesfile)
 
 print 'done!'
