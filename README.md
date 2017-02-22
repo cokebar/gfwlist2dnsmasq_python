@@ -1,12 +1,12 @@
+###Notification: This repo will not be maintained anymore unless critical bug is found. Please use shell script version instead:
+
+https://github.com/cokebar/gfwlist2dnsmasq
+
 gfwlist2dnsmasq
 =================
 Intro
 -----
 Just another script to auto-generate dnsmasq ipset rules using gfwlist
-
-__Notification: This repo will not be maintained anymore unless critical bug is found. Find shell script version instead at here:__
-
-https://github.com/cokebar/gfwlist2dnsmasq
 
 __Notification: Need python2, do not use python3__
 
