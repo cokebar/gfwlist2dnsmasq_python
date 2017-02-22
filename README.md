@@ -4,7 +4,9 @@ Intro
 -----
 Just another script to auto-generate dnsmasq ipset rules using gfwlist
 
-__Notification: Because python is not applicable for most routers, so this repo will not be maintained anymore unless critical bug is found. You can fork this repo and modify it by yourself. I'm planning write a shell script version instead__
+__Notification: This repo will not be maintained anymore unless critical bug is found. Find shell script version instead at here:__
+
+https://github.com/cokebar/gfwlist2dnsmasq
 
 __Notification: Need python2, do not use python3__
 
