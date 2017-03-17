@@ -1,4 +1,4 @@
-###Notification: This repo will not be maintained anymore unless critical bug is found. Please use shell script version instead:
+### Notification: This repo will not be maintained anymore unless critical bug is found. Please use shell script version instead:
 
 https://github.com/cokebar/gfwlist2dnsmasq
 
